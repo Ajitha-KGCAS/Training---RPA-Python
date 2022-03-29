@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+const char *stringchar(const char *hay, const char needle) {
+  // return strchr(hay, needle);
+  do {
+    if (*hay == needle)
+       return hay;
+    
+  }while(*hay++);
+return "TBD";
+}
+
+/////////////// DO NOT EDIT //////////////////
+///                                        ///
+///                                        ///
+///                                        ///
+///                                        ///
+///                                        ///
+
+int main() {
+  char hay[200] = "";
+  char needle = '\0';
+  scanf("%s %c", hay, &needle);
+  const char *find = stringchar(hay, needle);
+  printf("%p ", find);
+  if (find)
+    printf("offset %d\n", find - hay);
+  else
+    printf("-1\n");
+  return 0;
+  ///                                        ///
+  ///                                        ///
+  ///                                        ///
+  ///                                        ///
+  ///                                        ///
+  /////////////// DO NOT EDIT //////////////////
+}
